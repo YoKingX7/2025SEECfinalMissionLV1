@@ -1,0 +1,402 @@
+/* CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+/* CSS Reset End */
+
+a{
+	text-decoration: none;
+}
+
+/* rwd img css，可當作是 CSS Reset 其中一個 */
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+/* 全域 border box */
+*,*:before,*:after{
+	box-sizing: border-box;
+}
+
+/* 主體 CSS */
+
+.header{
+    margin: 30px;
+}
+.nav{
+    display: flex;
+    justify-content: center;
+}
+.nav a{
+    text-decoration: none;
+    color: #000;
+    margin: 5px;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.title-main {
+	display: flex;
+}
+.title-main_item {
+	width: 50%;
+}
+.title-main__img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.title-main_title {
+	color: #0027d5;
+	margin-top: 15%;
+	margin-left: -45%;
+}
+.title_main-maintitle {
+	font-size: 120px;
+	font-weight: 900;
+}
+.title_main-subtitle {
+	font-size: 28px;
+	font-weight: bold;
+	margin-top: 10%;
+}
+
+.wrap {
+	display: flex;
+	gap: 24px;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+.thumbnail {
+	width: calc(50% - 12px);
+}
+.wrap_content {
+	width: calc(50% - 12px);
+	flex-shrink: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.pointTag {
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 1.5;
+	color: #0027d5;
+	margin-top: 4px;
+	margin-bottom: 8px;
+}
+.newTag {
+	margin-left: 8px;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.5;
+	background-color: #0027d5;
+	color: #ffffff;
+	padding: 6px 12px;
+	border-radius: 40px;
+	display: inline-block;
+	vertical-align: bottom;
+}
+.pointTitle {
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 1.5;
+}
+.pointContent{
+	font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    line-clamp: 2;
+    overflow: hidden;
+	text-overflow: ellipsis;
+    margin: 8px 0 16px 0;
+}
+.wrap_content a{
+    text-align: center;
+    display: block;
+    width: 100px;
+    color: #4B4B4B;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 40px;
+    padding: 8px 16px;
+}
+.wrap_content a:hover{
+    background-color: #4B4B4B;
+    color: #fff;
+}
+
+body{
+    line-height: 1.5;
+    font-family: Noto Sans TC;
+}
+
+.card {
+	max-width: 1296px;
+	margin: 40px auto;
+	position: relative;
+	padding-bottom: 100px;
+}
+.search-box{
+	display: flex;
+	align-items: center;
+	border: 2px solid #555;
+	border-radius: 9999px; /* 極大圓角 */
+	padding: 16px;
+	width: 416px;
+    margin: 80px 0 40px 0;
+    gap: 8px; /* 圖示與輸入框間距 */
+}
+.search-box input{
+	border: none;
+	outline: none;
+	flex: 1;
+	font-size: 16px;
+}
+.search-icon{
+	width: 24px;
+	height: 24px;
+	margin-right: 10px;
+}
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 24px;  /* li 左右間距 */
+    row-gap: 80px;    /* li 上下間距 */
+}
+.list-item{
+    width: 416px;
+}
+.list-item-info{
+    margin-top: 16px;
+    height: 260px;
+}
+time{
+    height: 24px;
+    font-size: 16px;
+	font-weight:500;
+	color: #000000;
+}
+.tag{
+    font-weight:500;
+    height: 36px;
+    font-size: 24px;
+    color: #0027D5;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 4px 8px 4px 0;
+}
+.tag-item{
+    margin-right: 8px;
+}
+.content h2{
+    font-size: 28px;
+    color: #000;
+    font-weight: 700;
+}
+.content p{
+    font-weight: 500;
+    font-size: 16px;
+    color: #4B4B4B;
+    display: -webkit-box;
+    -webkit-box-orient: vertical; /* 與 display: -webkit-box; 搭配 */
+    -webkit-line-clamp:2; /* 最多顯示兩行，相容性是支援以 -webkit 開發的瀏覽器，不支援 IE 跟 FireFox */
+    line-clamp: 2;
+    overflow: hidden; /* 超出設定的範圍就隱藏 */
+	text-overflow: ellipsis; /* 省略號（...）的意思 */
+    margin: 8px 0 16px 0;
+}
+
+.list-item-info a{
+    text-align: center;
+    display: block;
+    width: 100px;
+    color: #4B4B4B;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 40px;
+    padding: 8px 16px;
+}
+.list-item-info a:hover{
+    background-color: #4B4B4B;
+    color: #fff;
+}
+/* .tag a{
+    width: 90px;
+    height: 36px;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: #0027D5;
+    padding: 6px 12px;
+    font-weight: 700;
+    margin-left: 8px;
+}
+.tag a:hover{
+    background-color: green;
+} */
+
+.pagination {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	background: #f9f9f9;
+	border-radius: 999px;
+	padding: 10px 20px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pagination a,
+.pagination .dots {
+	color: #444;
+	text-decoration: none;
+	padding: 6px 10px;
+	border-radius: 6px;
+	transition: background 0.2s;
+}
+
+.pagination a:hover {
+	background: #eaeaea;
+}
+
+.pagination a.active {
+	font-weight: bold;
+	color: blue;
+}
+
+.footer-info{
+	display: flex;
+	justify-content: space-around;
+	padding: 20px;
+	align-items: center;
+	font-size: 24px;
+	border-top: 1px solid #000;
+}
+.footer {
+	text-align: center;
+	padding: 20px;
+	font-size: 12px;
+}
+
+
+@media (max-width: 375px) {
+	.title-main {
+		display: block;
+	}
+	.title-main_item {
+		width: 100%;
+		height: 260px;
+	}
+	.img2 {
+		height: 145px;
+	}
+	.title-main__img{
+		height: 265px;
+	}
+	.title-main_title {
+		margin-top: -35%;
+		margin-left: auto;
+		margin-right: auto;
+		display: table;
+	}
+	.title_main-maintitle {
+		font-size: 52px;
+	}
+	.title_main-subtitle {
+		margin-bottom: 10%;
+	}
+
+	.wrap {
+		flex-direction: column;
+		gap:0px;
+	}
+	.thumbnail {
+		width: 100%;
+	}
+	.wrap_content {
+		width: 100%;
+		padding: 48px 12px;
+	}
+
+	.card{
+		padding-right: 12px;
+		padding-left: 12px;
+	}
+	.search-box{
+		width: 351px;
+	}
+	.list{
+		row-gap: 60px;    /* li 上下間距 */
+	}
+	.tag{
+		flex-wrap: nowrap;
+	}
+	.tag-item{
+		margin-right: 0.5px;
+	}
+	.footer-info {
+		display: none;
+	}
+
+	.footer {
+		font-size: 14px;
+		padding: 40px 10px;
+		border-top: 1px solid #000;
+	}
+}
