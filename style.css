@@ -58,6 +58,7 @@ a{
 img{
 	max-width: 100%;
 	height: auto;
+	display: block;
 }
 
 /* 全域 border box */
@@ -109,6 +110,11 @@ img{
 	margin-top: 10%;
 }
 
+.container {
+	max-width: 1320px;  /* 1296px + 24px (padding) */
+	padding: 0 12px;    /* 設定 padding 避免內容貼齊螢幕邊緣 */
+	margin: 0 auto;
+}
 .wrap {
 	display: flex;
 	gap: 24px;
@@ -128,7 +134,7 @@ img{
 .pointTag {
 	font-weight: 500;
 	font-size: 24px;
-	line-height: 1.5;
+	/* line-height: 1.5; */
 	color: #0027d5;
 	margin-top: 4px;
 	margin-bottom: 8px;
@@ -137,7 +143,7 @@ img{
 	margin-left: 8px;
 	font-size: 16px;
 	font-weight: 700;
-	line-height: 1.5;
+	/* line-height: 1.5; */
 	background-color: #0027d5;
 	color: #ffffff;
 	padding: 6px 12px;
@@ -148,7 +154,7 @@ img{
 .pointTitle {
 	font-weight: 700;
 	font-size: 28px;
-	line-height: 1.5;
+	/* line-height: 1.5; */
 }
 .pointContent{
 	font-weight: 500;
@@ -164,7 +170,8 @@ img{
 }
 .wrap_content a{
     text-align: center;
-    display: block;
+    /* display: block; */
+	display: inline-block;
     width: 100px;
     color: #4B4B4B;
     background-color: #fff;
@@ -179,7 +186,7 @@ img{
 
 body{
     line-height: 1.5;
-    font-family: Noto Sans TC;
+	font-family: "Noto Sans TC", sans-serif;
 }
 
 .card {
@@ -194,7 +201,7 @@ body{
 	border: 2px solid #555;
 	border-radius: 9999px; /* 極大圓角 */
 	padding: 16px;
-	width: 416px;
+	max-width: 416px;
     margin: 80px 0 40px 0;
     gap: 8px; /* 圖示與輸入框間距 */
 }
@@ -216,22 +223,27 @@ body{
     column-gap: 24px;  /* li 左右間距 */
     row-gap: 80px;    /* li 上下間距 */
 }
-.list-item{
+/* .list-item{
     width: 416px;
+} */
+.list-item {
+    width: calc((100% - 48px) / 3); /* 三欄，中間 2 個 24px 的間距 */
+    max-width: 416px; /* 避免太寬 */
+    flex-grow: 1;
 }
 .list-item-info{
     margin-top: 16px;
-    height: 260px;
+    /* height: 260px; */
 }
 time{
-    height: 24px;
+    /* height: 24px; */
     font-size: 16px;
 	font-weight:500;
 	color: #000000;
 }
 .tag{
     font-weight:500;
-    height: 36px;
+    /* height: 36px; */
     font-size: 24px;
     color: #0027D5;
     display: flex;
@@ -262,8 +274,9 @@ time{
 
 .list-item-info a{
     text-align: center;
-    display: block;
-    width: 100px;
+    /* display: block; */
+	display: inline-block;
+    /* width: 100px; */
     color: #4B4B4B;
     background-color: #fff;
     border: 1px solid #000;
@@ -328,14 +341,24 @@ time{
 	font-size: 24px;
 	border-top: 1px solid #000;
 }
+.blog{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
 .footer {
 	text-align: center;
 	padding: 20px;
 	font-size: 12px;
 }
 
-
-@media (max-width: 375px) {
+@media (max-width: 991px) {
+	.list{
+		width: 100%;
+	}
+    .list-item {
+        width: calc((100% - 24px) / 2); /* 兩欄 */
+    }
 	.title-main {
 		display: block;
 	}
@@ -379,7 +402,9 @@ time{
 		padding-left: 12px;
 	}
 	.search-box{
-		width: 351px;
+		/* width: 351px; */
+		max-width: 100%;
+		width: 100%;
 	}
 	.list{
 		row-gap: 60px;    /* li 上下間距 */
@@ -399,4 +424,14 @@ time{
 		padding: 40px 10px;
 		border-top: 1px solid #000;
 	}
+}
+
+@media (max-width: 767px) {
+    .list-item {
+        width: 100%; /* 一欄 */
+		margin: 0 auto;
+    }
+    .list {
+        column-gap: 0;
+    }
 }
